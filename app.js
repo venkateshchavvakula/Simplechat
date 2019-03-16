@@ -17,8 +17,9 @@ app.get('/', (req, res) => {
 //Listen on port 3000
 //server = app.listen(3000)
 
-const PORT = process.env.port||'8080';
-server=app.listen(PORT)
+
+
+const PORT = process.env.PORT || 3000; server=app.listen(PORT, () => { console.log(`Our app is running on port ${ PORT }`); });
 
 //socket.io instantiation
 const io = require("socket.io")(server)
