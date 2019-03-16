@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 //server = app.listen(3000)
 
 const PORT = process.env.port||'8080';
-server=app.listen(PORT, ...)
+app.listen(PORT)
 
 //socket.io instantiation
 const io = require("socket.io")(server)
