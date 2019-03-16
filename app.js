@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 
-
+//samplechatserver
 //set the template engine ejs
 app.set('view engine', 'ejs')
 
@@ -15,9 +15,10 @@ app.get('/', (req, res) => {
 })
 
 //Listen on port 3000
-server = app.listen(3000)
+//server = app.listen(3000)
 
-
+const PORT = process.env.PORT ||config.httpPort; 
+server=app.listen(PORT, ...)
 
 //socket.io instantiation
 const io = require("socket.io")(server)
